@@ -3,13 +3,39 @@
   color: #fff;
   padding: 4rem;
 
+  // responsive
+  @media (max-width: 700px) {
+    padding: 2rem;
+  }
+
   .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 
+    // responsive
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    & > div:first-child {
+      // responsive
+      @media (max-width: 700px) {
+        order: 2;
+      }
+    }
+
     & > div:nth-child(2) {
       text-transform: capitalize;
+    }
+
+    & > div:nth-child(2),
+    & > div:nth-child(3) {
+      // responsive
+      @media (max-width: 700px) {
+        display: none;
+      }
     }
   }
 

@@ -1,12 +1,38 @@
 .section-a {
   margin: 2rem 0;
 
+  // reponsive
+  @media (max-width: 700px) {
+    margin-bottom: 4rem;
+  }
+
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     // justify-content: center;
     align-items: center;
     gap: 3rem;
+
+    // resposive
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    // responsive
+    & > div {
+      @media (max-width: 700px) {
+        order: 2;
+      }
+    }
+
+    // responsive
+    & > img {
+      @media (max-width: 700px) {
+        width: 80%;
+        margin: auto;
+      }
+    }
 
     h1 {
       font-size: 4rem;
